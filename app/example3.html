@@ -4,11 +4,12 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>ReactJS example</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 
 	<!-- render -->	
-	<div id="render-hello-world">
+	<div id="render">
 		
 	</div>
 	<!--/ render -->
@@ -18,14 +19,34 @@
 
 	<!-- harmony=true indicate can be used ecs6 -->
 	<script type="text/jsx;harmony=true"> 
+		var pokemons = [
+			{number: 1, name: 'Bulbasaur'},
+			{number: 2, name: 'Ivysaur'},
+			{number: 3, name: 'Venusaur'}
+		];
+
+		class PokeAvatar extends React.Component {
+			render() {
+				var url =  `http://veekun.com/dex/media/pokemon/main-sprites/x-y/${this.props.number}.png`;
+				return <img src={url} className ="avatar"/>
+			}
+		}
+
 		class PokeRow extends React.Component {
 			render() {
-				return <div>
-					<img src="" />
+				return <div className ="pokerow">
+					<PokeAvatar number={this.props.number} />
 					{this.props.name}
 				</div>
 			}
 		}
+
+		var pokemon = pokemons[0];
+		React.render(
+			<PokeRow name={pokemon.name} number={pokemon.number} />, 
+			document.getElementById('render')
+		);
+
 	</script>
 </body>
 </html>
