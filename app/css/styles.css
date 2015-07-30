@@ -1,3 +1,7 @@
+ul {
+	list-style: none;
+}
+
 .avatar {
 	width: 50px;
 	margin-right: 12px;
