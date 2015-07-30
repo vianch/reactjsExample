@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ReactJS example</title>
+</head>
+<body>
+
+	<!-- render -->	
+	<div id="render-hello-world">
+		
+	</div>
+	<!--/ render -->
+
+	<script src="js/react.js"></script>
+	<script src="js/JSXTransformer.js"></script>
+
+	<!-- harmony=true indicate can be used ecs6 -->
+	<script type="text/jsx;harmony=true"> 
+		class PokeRow extends React.Component {
+			render() {
+				return <div>
+					<img src="" />
+					{this.props.name}
+				</div>
+			}
+		}
+	</script>
+</body>
+</html>
