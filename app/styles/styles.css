@@ -17,6 +17,11 @@ ul.poketable {
 ul.poketable .pokerow {
   margin: 6px;
   cursor: pointer;
+  height: 75px;
+}
+ul.poketable .pokerow span {
+  position: relative;
+  bottom: 25px;
 }
 ul.pokechat {
   width: 250px;
@@ -28,4 +33,5 @@ ul.pokechat {
   width: 75px;
   margin-right: 12px;
   display: inline-block;
+  text-align: center;
 }
