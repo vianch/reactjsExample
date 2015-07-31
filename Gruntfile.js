@@ -10,6 +10,10 @@ module.exports = function(grunt) {
             js: {
                 files: ['app/components/*.js','app/*.js'],
                 tasks: ['browserify']
+            },
+            styles: {
+                files: ['app/styles/less/*.less'],
+                tasks: ['less','cssmin']
             } 
         },
         // Compiles ES6 modules so we can use it in the browser.
@@ -26,13 +30,38 @@ module.exports = function(grunt) {
                     }
                 }
             }
-        }
+        },
+
+        less: {
+            development: {
+                options: {
+                    paths: ["css"]
+                },
+                files: {
+                    "app/styles/styles.css": "app/styles/less/pokechat.less"
+                }
+            }
+        },
+
+         cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'app/styles',
+                    src: ['*.css', '!*.min.css'],
+                    dest: 'app/styles',
+                    ext: '.min.css'
+                }]
+            }
+        },
 
     });
 
     //libs
     grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     //custom taks
     grunt.registerTask('default', []);

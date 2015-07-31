@@ -1,0 +1,31 @@
+@import "libs/reset.css";
+@import "fonts/lato.css";
+body {
+  font-family: 'latoregular', sans-serif;
+  color: #1f1f20;
+}
+ul {
+  padding: 15px;
+  float: left;
+  display: inline-block;
+  height: 250px;
+}
+ul.poketable {
+  background: #dce0e6;
+  width: 210px;
+}
+ul.poketable .pokerow {
+  margin: 6px;
+  cursor: pointer;
+}
+ul.pokechat {
+  width: 250px;
+  background: #2b4c7e;
+  color: #dce0e6;
+  overflow-y: auto;
+}
+.avatar {
+  width: 75px;
+  margin-right: 12px;
+  display: inline-block;
+}

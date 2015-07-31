@@ -8,15 +8,6 @@
 #### SX
 * Mescla html con js en una sintaxis
 
-#Usando ecs6
-```javascript 
-class HelloWorld extends React.Component {
-	render() {
-		return <div className = 'message'> Hello world! </div>
-	}
-}
-```
-
 #### Virtual DOM
 * se guarda un arbol de objectos del DOM, queda en memoria (mas rápido acceso).
 * Cuando uno de los componentes llama a setState react lo que hace es marcarlo "dirty".
@@ -34,6 +25,14 @@ class HelloWorld extends React.Component {
 * En script  "build": "browserify app/index.js > app/js/app.js -t babelify"
 * > npm run build
 
+# Usando ecs6
+```javascript 
+class HelloWorld extends React.Component {
+	render() {
+		return <div className = 'message'> Hello world! </div>
+	}
+}
+```
 #### CICLO DE VIDA DE REACTJS
 * Mounting ->  se monta en el dom
 ```javascript 
@@ -41,4 +40,15 @@ componentWillMount()
 componentDidMount()
 ```
 * Updating -> se actualiza el componente
+```javascript 
+componentWillRecieveProps(nextProps)
+shouldComponentUpdate(nextProps, nextState) 
+componentWillUpdate(nextPorps, nextState)
+componentDidUpdate(nextPorps, nextState)
+```
 * Unmounting -> se quita el componente del dom
+```javascript 
+componentWillUnmount(nextProps)
+compone
+
+#### MIXINS

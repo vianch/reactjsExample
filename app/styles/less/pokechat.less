@@ -1,0 +1,44 @@
+//less imports
+@import (less) "variables.less";
+
+body{
+  font-family: @pc-font;
+  color: @color5;
+}
+
+ul {
+	padding:15px;
+	float: left;
+	display: inline-block;
+	height: 250px;
+
+	&.poketable {
+		background: @color1;
+		width: 210px;
+
+		.pokerow {
+			margin: 6px;
+			cursor: pointer;
+		}
+	}
+
+	&.pokechat {
+		
+		width: 250px;
+		background: @color4;
+		color: @color1;
+		overflow-y: auto
+	}
+
+	
+}
+
+.avatar {
+	width: 75px;
+	margin-right: 12px;
+	display: inline-block;
+}
+
+//css imports
+@import (css) "libs/reset.css";
+@import (css) "fonts/lato.css"; 
