@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./server/express-server"
+    "start": "node ./server/express-server",
+    "build": "browserify app/index.js > app/js/app.js -t babelify"
   },
   "repository": {
     "type": "git",
@@ -22,10 +23,16 @@
   },
   "homepage": "https://github.com/vianch/reactjsExample",
   "dependencies": {
+    "babelify": "^6.1.3",
+    "browserify": "^11.0.1",
     "express": "^4.13.1",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
     "morgan": "^1.6.1"
   },
   "devDependencies": {
+    "grunt-browserify": "^4.0.0",
+    "grunt-contrib-watch": "^0.6.1",
     "react": "^0.13.3"
   }
 }

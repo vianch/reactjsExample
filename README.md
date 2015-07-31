@@ -7,7 +7,6 @@
 * Mescla html con js en una sintaxis
 
 #Usando ecs6
-
 class HelloWorld extends React.Component {
 	render() {
 		return <div className = 'message'> Hello world! </div>
@@ -22,3 +21,15 @@ class HelloWorld extends React.Component {
 
 #PROPS
 * son propiedades parametrizables para pasar valores al render
+
+#MODULOS
+* Juntarlos con browserify para generar un solo javascript
+
+#BROWSERIFY ENTRY POINT 
+* En script  "build": "browserify app/index.js > app/js/app.js -t babelify"
+* > npm run build
+
+#CICLO DE VIDA DE REACTJS
+* Mounting ->  se monta en el dom
+* Updating -> se actualiza el componente
+* Unmounting -> se quita el componente del dom
