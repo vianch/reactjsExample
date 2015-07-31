@@ -7,11 +7,13 @@
 * Mescla html con js en una sintaxis
 
 #Usando ecs6
+```javascript 
 class HelloWorld extends React.Component {
 	render() {
 		return <div className = 'message'> Hello world! </div>
 	}
 }
+```
 
 #Virtual DOM
 * se guarda un arbol de objectos del DOM, queda en memoria (mas rápido acceso).
@@ -21,6 +23,7 @@ class HelloWorld extends React.Component {
 
 #PROPS
 * son propiedades parametrizables para pasar valores al render
+* Nunca colocar datos calculados, ni duplicados, ni otros componentes.
 
 #MODULOS
 * Juntarlos con browserify para generar un solo javascript
