@@ -36,5 +36,9 @@ class HelloWorld extends React.Component {
 
 #### CICLO DE VIDA DE REACTJS
 * Mounting ->  se monta en el dom
+```javascript 
+componentWillMount()
+componentDidMount()
+```
 * Updating -> se actualiza el componente
 * Unmounting -> se quita el componente del dom
