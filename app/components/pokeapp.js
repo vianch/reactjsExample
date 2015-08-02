@@ -2,6 +2,7 @@ import React from 'react';
 import Uid from 'uid';
 import PokeTable from './poketable';
 import PokeChat from './pokechat';
+import $ from 'jquery';
 
 class PokeApp extends React.Component {
 
@@ -31,7 +32,7 @@ class PokeApp extends React.Component {
 		];
 
 		return <div className = "pokeapp">
-			<PokeTable pokemons={pokemons} onGrowl = { this.onGrowl }/>
+			<PokeTable pokemons={this.state.pokemons} onGrowl = { this.onGrowl }/>
 			<PokeChat messages = {this.state.messages}/>
 		</div>
 	}

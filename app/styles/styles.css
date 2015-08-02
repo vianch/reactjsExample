@@ -9,6 +9,7 @@ ul {
   float: left;
   display: inline-block;
   height: 250px;
+  overflow-y: auto;
 }
 ul.poketable {
   background: #dce0e6;
@@ -27,11 +28,17 @@ ul.pokechat {
   width: 250px;
   background: #2b4c7e;
   color: #dce0e6;
-  overflow-y: auto;
 }
 .avatar {
-  width: 75px;
+  width: 50px;
   margin-right: 12px;
   display: inline-block;
   text-align: center;
+}
+.message-animation-enter {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+.message-animation-enter.message-animation-enter-active {
+  opacity: 1;
 }

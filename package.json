@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node ./server/express-server-ecs6",
+    "start": "babel-node ./server/express-server-ecs6.js",
     "build": "browserify app/index.js > app/js/app.js -t babelify"
   },
   "repository": {
@@ -26,19 +26,20 @@
     "babel": "^5.8.20",
     "babelify": "^6.1.3",
     "browserify": "^11.0.1",
-    "express": "^4.13.1",
+    "express": "^4.13.2",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
-    "morgan": "^1.6.1"
+    "morgan": "^1.6.1",
+    "socket.io": "^1.3.6",
+    "socket.io-client": "^1.3.6"
   },
   "devDependencies": {
     "grunt-browserify": "^4.0.0",
     "grunt-contrib-cssmin": "^0.13.0",
     "grunt-contrib-less": "^1.0.1",
     "grunt-contrib-watch": "^0.6.1",
+    "jquery": "^2.1.4",
     "react": "^0.13.3",
-    "socket.io": "^1.3.6",
-    "socket.io-client": "^1.3.6",
     "uid": "0.0.2"
   }
 }
