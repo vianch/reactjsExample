@@ -1,4 +1,4 @@
-import pokemos from './pokemons';
+import pokemons from './pokemons';
 
 export default {
 	pokemons: {

@@ -2,7 +2,7 @@ import express from 'express';
 import http from 'http';
 import engine from 'socket.io';
 import path from 'path';
-import dbapi from '/.dbapi';
+import dbapi from './dbapi';
 
 const port = 3000;
 const app = express();
@@ -20,15 +20,17 @@ app.get('/pokemons', (req, res) => {
 	});
 });
 
-let server = app.listen(port, () => {
-   console.log(`El servkdlr esta escuchando en el puerto ${port}`);
+let server = http.createServer(app).listen(port, () => {
+  console.log(`El servidor está escuchando en el puerto ${port}`);
 });
 
 
 const io = engine.listen(server);
 
-io.on('connection',(socket) => {
-	socket.on('message', (msg) => {
-		io.emit('message', msg);
-	});
-});
+io.on('connection', (socket) => {
+	console.log("io connecte");
+  socket.on('message', (msg) => {
+  	console.log("io meesage connection");
+    io.emit('message', msg);
+  })
+})
